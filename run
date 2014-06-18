@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+mvn install compile
+
+#mvn exec:java -Dexec.mainClass=MainHadoop -Djava.library.path=/opt/mapr/lib -Dexec.classpathScope=runtime
+mvn exec:java -Dexec.mainClass=MainHbase -Djava.library.path=/opt/mapr/lib -Dexec.classpathScope=runtime
